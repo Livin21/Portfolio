@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Livin Mathew</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="jumbotron" id="jumbo_desc">
+			<div class="container" id="kuttets_description">
+				<img src="./img/livin.jpg" id="dp" class="img-responsive">
+				<h2>Livin Mathew</h2>
+				<p>
+I'm an India based Android Developer creating awesome and effective apps for companies of all sizes around the globe.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here</p>
+				<p>
+					<a class="btn btn-primary btn-lg" href="/more" id="button_more">Moar.. I Want Moarr..</a>
+				</p>
+				<div class="row">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 icocol">
+						<a href="https://github.com/Livin21" ><img src="./icons/github.png" class="icons"/></a>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 icocol">
+						<a href="https://www.facebook.com/livinthelivinglegacy" ><img src="./icons/facebook.png" class="icons"/></a>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 icocol">
+						<a href="https://www.linkedin.com/in/livin21" ><img src="./icons/linkedin.png" class="icons"/></a>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 icocol">
+						<a href="https://twitter.com/Livin_Mathew" ><img src="./icons/twitter.png" class="icons"/></a>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</body>
+<style type="text/css">
+	body{
+		background-image: url('./img/bg.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+	#kuttets_description,#kuttets_description>p{
+		text-align: justify;
+		font-size:1.0em;
+	}
+	#kuttets_description>h2{
+		text-align: center;
+	}
+	#jumbo_desc{
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(238, 238, 238, 0.59);
+	}
+	.btn-primary{
+	    color: #fff;
+	    background-color: rgb(95, 92, 90);
+	    border-color: #959291;
+	}
+	.btn-primary:hover{
+	    color: #fff;
+	    background-color: rgb(37, 37, 37);
+	    border-color: #959291;
+	}
+	.btn-primary:active{
+	    color: #fff;
+	    background-color: rgb(95, 92, 90);
+	    border-color: #959291;
+	}
+	#dp{
+		border-radius: 100%;
+		display:block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 150px;
+	}
+	.icons{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 50px;
+		margin-top: 20px;
+	}
+	.container-fluid{
+		padding: 0px;
+		}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// $("#jumbo_desc").attr("minHeight",availh);	
+		$("#jumbo_desc").animate({paddingTop:'50px'},250);		
+		window.setInterval(function(){
+	    var availh=window.innerHeight;
+		var availw=window.innerWidth;
+		$("#jumbo_desc").animate({minHeight:availh},200);
+		$("#button_more").animate({marginLeft:availw*0.5},300);
+		},500);
+		
+	});
+</script>
+</html>

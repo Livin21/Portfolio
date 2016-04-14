@@ -1,0 +1,33 @@
+application: portfolio-website-1260
+version: 3
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.+\.(css|js))$
+  static_files: \1
+  upload: .+\.(css|js)$
+  application_readable: true
+
+- url: /(.+\.(jpg|png|jpeg))$
+  static_files: \1
+  upload: .+\.(jpg|png|jpeg)$
+  application_readable: true
+
+- url: /(.+\.(svg|eot|ttf|woff|html|pdf))$
+  static_files: \1
+  upload: .+\.(svg|eot|ttf|woff|html|pdf)$
+  application_readable: true
+
+- url: /.*
+  script: main.app
+
+inbound_services:
+- mail
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
